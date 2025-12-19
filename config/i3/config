@@ -128,22 +128,10 @@ bindsym $mod+Escape exec --no-startup-id ~/.config/i3/scripts/power.sh
 bindsym $mod+l exec --no-startup-id i3lock-fancy
 
 # Files
-bindsym $mod+e exec --no-startup-id nautilus
-
-# Proton
-bindsym $mod+p exec protonvpn-app
-
-# Flameshot
-bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+bindsym $mod+e exec --no-startup-id pcmanfm
 
 # Burpsuite
 bindsym $mod+b exec burpsuitepro
-
-# Obsidian
-bindsym $mod+o exec obsidian
-
-# Clipmenu
-bindsym $mod+shift+a exec clipmenu
 
 # Google-Chrome
 bindsym $mod+g exec google-chrome
@@ -153,15 +141,14 @@ bindsym $mod+r mode "resize"
 
 # Floating APPS
 for_window [class="kitty"] floating enable
-for_window [class="Protonvpn-app"] floating enable
-for_window [class="org.gnome.Nautilus"] floating enable
+for_window [class="pcmanfm"] floating enable
 
 # AutoEXEC
 exec_always --no-startup-id exec i3-workspace-names-daemon
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
-#exec --no-startup-id feh --bg-fill /home/banyio/Pictures/porsche.jpg
+
 # Wallpaper
-exec --no-startup-id sh -c 'sleep 1 && feh --no-fehbg --bg-fill /home/banyio/Pictures/porsche.jpg'
+exec --no-startup-id sh -c 'sleep 1 && feh --no-fehbg --bg-fill /home/banyio/Pictures/porsche-wallpaper.jpg'
 
 # i3bar with i3blocks
 bar {
