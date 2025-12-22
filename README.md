@@ -3,11 +3,11 @@ Minimalist setup for **Orange PI Zero 2w - Debian13-ARMBIAN**
 
 ## Instalation
 
-After cloning the repo just run with sudo deploy-13-debian13.sh
+After cloning the repo just run with sudo deploy-OrangePi2W-I3-debian13.sh
 
 ```Shell
-chmod +x deploy-13-debian13.sh
-sudo ./deploy-13-debian13.sh
+chmod +x deploy-OrangePi2W-I3-debian13.sh
+sudo ./deploy-OrangePi2W-I3-debian13.sh
 ```
 
 ## Configuration
