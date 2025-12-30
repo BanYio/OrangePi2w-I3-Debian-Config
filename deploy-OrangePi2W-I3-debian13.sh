@@ -39,7 +39,7 @@ check_installed() {
 
 # Instalar aplicaciones
 sudo apt update
-sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting kitty curl python3-pip python3-venv pipx docker.io docker-compose locate tree i3 i3blocks i3lock i3lock-fancy i3status i3-wm picom rofi feh fonts-font-awesome jq nmap netdiscover make gcc build-essential python3-dev libffi-dev libssl-dev rustc cargo firefox pcmanfm -y
+sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting kitty curl python3-pip python3-venv pipx docker.io docker-compose locate tree i3 i3blocks i3lock i3lock-fancy i3status i3-wm picom rofi feh fonts-font-awesome jq nmap netdiscover make gcc build-essential python3-dev libffi-dev libssl-dev rustc cargo firefox-esr pcmanfm -y
 
 
 #############
@@ -49,22 +49,6 @@ sudo -u "$REAL_USER" pipx ensurepath
 sudo -u "$REAL_USER" pipx install git+https://github.com/Pennyw0rth/NetExec
 sudo -u "$REAL_USER" python3 -m pipx install impacket
 sudo -u "$REAL_USER" pip3 install i3-workspace-names-daemon --break-system-packages
-
-
-################
-# APLICACIONES #
-################
-
-# Instalar Google Chrome
-if ! check_installed google-chrome-stable; then
-  echo -e "${GREEN}[+] Instalando Google Chrome...${RESET}"
-  CHROME_DEB="/tmp/google-chrome.deb"
-  wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O "$CHROME_DEB"
-  dpkg -i "$CHROME_DEB" || apt -f install -y
-  rm "$CHROME_DEB"
-else
-  echo -e "${YELLOW}[!] Google Chrome ya está instalado, omitiendo instalación.${RESET}"
-fi
 
 
 ############
@@ -154,4 +138,5 @@ chmod +x "/home/$REAL_USER/.xsession"
 
 sudo cp /etc/xrdp/startwm.sh /etc/xrdp/startwm.sh.bak
 sudo mv RDP/startwm.sh /etc/xrdp/startwm.sh
+
 sudo systemctl restart xrdp xrdp-sesman
