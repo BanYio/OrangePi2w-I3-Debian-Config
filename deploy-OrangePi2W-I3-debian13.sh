@@ -112,6 +112,7 @@ mkdir -p "/home/$REAL_USER/.config/rofi"
 cp -r config "/home/$REAL_USER/.config/"
 
 # Fuentes de NerdFonts
+/home/$REAL_USER/OrangePi2w-I3-Config
 mkdir Fonts
 cd Fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Ubuntu.zip
@@ -133,10 +134,11 @@ cp Wallpapers/porsche-wallpaper.jpg /home/banyio/Pictures/
 # RDP+I3 # 
 ##########
 sudo apt install xorg xserver-xorg xinit i3 xrdp dbus-x11 xorgxrdp -y
-cp RDP/xsession "/home/$REAL_USER/.xsession"
+sudo -u "$REAL_USER" cp RDP/xsession "/home/$REAL_USER/.xsession"
 chmod +x "/home/$REAL_USER/.xsession"
 
 sudo cp /etc/xrdp/startwm.sh /etc/xrdp/startwm.sh.bak
 sudo mv RDP/startwm.sh /etc/xrdp/startwm.sh
 
 sudo systemctl restart xrdp xrdp-sesman
+
