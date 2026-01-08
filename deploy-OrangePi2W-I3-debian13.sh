@@ -101,12 +101,12 @@ chmod +x config/i3/scripts/*
 chmod +x config/i3blocks/scripts/*
 
 # Crear carpetas necesarias en .config
-mkdir -p "/home/$REAL_USER/.config"
-mkdir -p "/home/$REAL_USER/.config/i3"
-mkdir -p "/home/$REAL_USER/.config/i3blocks"
-mkdir -p "/home/$REAL_USER/.config/kitty"
-mkdir -p "/home/$REAL_USER/.config/picom"
-mkdir -p "/home/$REAL_USER/.config/rofi"
+sudo -u "$REAL_USER" mkdir -p "/home/$REAL_USER/.config"
+sudo -u "$REAL_USER" mkdir -p "/home/$REAL_USER/.config/i3"
+sudo -u "$REAL_USER" mkdir -p "/home/$REAL_USER/.config/i3blocks"
+sudo -u "$REAL_USER" mkdir -p "/home/$REAL_USER/.config/kitty"
+sudo -u "$REAL_USER" mkdir -p "/home/$REAL_USER/.config/picom"
+sudo -u "$REAL_USER" mkdir -p "/home/$REAL_USER/.config/rofi"
 
 # Copia de los dot files y la fuente
 cp -r config "/home/$REAL_USER/.config/"
@@ -141,4 +141,5 @@ sudo cp /etc/xrdp/startwm.sh /etc/xrdp/startwm.sh.bak
 sudo mv RDP/startwm.sh /etc/xrdp/startwm.sh
 
 sudo systemctl restart xrdp xrdp-sesman
+
 
