@@ -130,11 +130,8 @@ bindsym $mod+l exec --no-startup-id i3lock-fancy
 # Files
 bindsym $mod+e exec --no-startup-id pcmanfm
 
-# Burpsuite
-bindsym $mod+b exec burpsuitepro
-
-# Google-Chrome
-bindsym $mod+g exec google-chrome
+# Firefox
+bindsym $mod+g exec firefox
 
 # Resize
 bindsym $mod+r mode "resize"
