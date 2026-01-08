@@ -1,6 +1,10 @@
 # OrangePi2w-I3-Debian-Config
 Minimalist setup for **Orange PI Zero 2w - Debian13-ARMBIAN**
 
+<img width="960" height="540" alt="ORANGE-PI-ZERO-2W-orange-desktop" src="https://github.com/user-attachments/assets/099c0c4f-aedf-49a7-bf8e-06d9133d9f91" />
+<img width="960" height="540" alt="ORANGE-PI-ZERO-2W-orange-rdp" src="https://github.com/user-attachments/assets/891cc75c-764c-4870-b8ec-dec7943a1d84" />
+
+
 ## Instalation
 
 After cloning the repo just run with sudo deploy-OrangePi2W-I3-debian13.sh
