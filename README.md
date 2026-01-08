@@ -44,17 +44,14 @@ nano config  # edit it with your preferred editor
 | Windows + Shift + Q | close focused window |
 | Windows + Shift + R | Restar I3 manager |
 | Windows + L | Lock session |
+| Windows + Esc | Power Menu (Log-out, restart, power-off) |
 
 
 ## Shortcuts for personal tools
 | command | exec |
 | :--- | :--- |
-| Windows + O | Obsidian |
-| Windows + Shift + S | Flameshot (screenshots) |
-| Windows + P | ProtonVPN |
-| Windows + G | Google-Chrome |
-| Windows + Esc | Power Menu (Log-out, restart, power-off) |
-| Windows + E | File Explorer (Nautilus) |
+| Windows + F | firefox |
+| Windows + E | File Explorer (pcmanfm) |
 
 
 ## Shortcuts for Kitty
